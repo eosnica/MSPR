@@ -15,12 +15,12 @@ pipeline {
                 //sh "mvn clean"
                 
                 git 'https://github.com/eosnica/MSPR.git'
-                bat "echo test"
+               
 
                 // To run Maven on a Windows agent, use
-                //dir('go-securi') {
-                    //bat "mvn -Dmaven.test.failure.ignore=true clean"
-                //}
+                dir('go-securi') {
+                    bat "mvn -Dmaven.test.failure.ignore=true clean"
+                }
                 
             }
         }
