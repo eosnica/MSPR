@@ -27,7 +27,7 @@ pipeline {
             steps 
             {
                 // Get some code from a GitHub repository
-                //git 'https://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@github.com/Enseignant69/helloJenkins.git'
+                //git 'https://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@github.com/eosnica/MSPR.git'
 
                 // Run Maven on a Unix agent.
                 //sh "mvn clean"
@@ -46,7 +46,7 @@ pipeline {
             steps 
             {
                 // Get some code from a GitHub repository
-                //git 'https://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@github.com/Enseignant69/helloJenkins.git'
+                //git 'https://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@github.com/eosnica/MSPR.git'
 
                 // Run Maven on a Unix agent.
                 //sh "mvn clean"
@@ -65,7 +65,7 @@ pipeline {
             steps 
             {
                 // Get some code from a GitHub repository
-                //git 'https://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@github.com/Enseignant69/helloJenkins.git'
+                //git 'https://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@github.com/eosnica/MSPR.git'
 
                 // Run Maven on a Unix agent.
                 //sh "mvn clean"
