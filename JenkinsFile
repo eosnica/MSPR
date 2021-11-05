@@ -15,7 +15,7 @@ pipeline {
                 //sh "mvn clean"
 
                 // To run Maven on a Windows agent, use
-                dir('Jenkins') {
+                dir('go-securi') {
                     bat "mvn -Dmaven.test.failure.ignore=true clean"
                 }
                 
@@ -33,7 +33,7 @@ pipeline {
                 //sh "mvn clean"
 
                 // To run Maven on a Windows agent, use
-                dir('Jenkins') 
+                dir('go-securi') 
                 {
                     bat "mvn -Dmaven.test.failure.ignore=true package"
                 }
@@ -52,7 +52,7 @@ pipeline {
                 //sh "mvn clean"
 
                 // To run Maven on a Windows agent, use
-                dir('Jenkins') 
+                dir('go-securi') 
                 {
                     bat "mvn -Dmaven.test.failure.ignore=true install"
                 }
@@ -71,7 +71,7 @@ pipeline {
                 //sh "mvn clean"
 
                 // To run Maven on a Windows agent, use
-                dir('Jenkins') 
+                dir('go-securi') 
                 {
                     bat "mvn -Dmaven.test.failure.ignore=true test"
                 }
