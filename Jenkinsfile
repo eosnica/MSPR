@@ -10,7 +10,7 @@ pipeline {
                 // Get some code from a GitHub repository
                 git 'https://github.com/eosnica/MSPR.git'
                 // Run Maven on a Unix agent.
-                sh "mvn clean"
+                //sh "mvn clean"
                 
                
                 // To run Maven on a Windows agent, use
@@ -28,7 +28,7 @@ pipeline {
                 // Get some code from a GitHub repository
                 git 'https://github.com/eosnica/MSPR.git'
                 // Run Maven on a Unix agent.
-                sh "mvn clean"
+                //sh "mvn clean"
                 // To run Maven on a Windows agent, use
                 dir('go-securi') 
                 {
@@ -46,7 +46,7 @@ pipeline {
                 git 'https://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@github.com/eosnica/MSPR.git'
 
                 // Run Maven on a Unix agent.
-                sh "mvn clean"
+                //sh "mvn clean"
                 // To run Maven on a Windows agent, use
                 dir('go-securi') 
                 {
@@ -64,7 +64,7 @@ pipeline {
                 git 'https://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@github.com/eosnica/MSPR.git'
 
                 // Run Maven on a Unix agent.
-                sh "mvn clean"
+                //sh "mvn clean"
                 // To run Maven on a Windows agent, use
                 dir('go-securi') 
                 {
