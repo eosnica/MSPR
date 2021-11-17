@@ -10,7 +10,7 @@ pipeline {
         stage('Clean') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://https://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@github.com/eosnica/MSPR.git'
+                git 'https://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@github.com/eosnica/MSPR.git'
                 // Run Maven on a Unix agent.
                 sh "mvn clean"
                 
@@ -29,7 +29,7 @@ pipeline {
             steps 
             {
                 // Get some code from a GitHub repository
-                git 'https://https://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@github.com/eosnica/MSPR.git'
+                git 'https://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@github.com/eosnica/MSPR.git'
 
                 // Run Maven on a Unix agent.
                 sh "mvn clean"
