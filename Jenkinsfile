@@ -15,7 +15,7 @@ pipeline {
                  sh "mvn clean"
                 
                 //git 'https://github.com/eosnica/MSPR.git'
-                bat echo 'bonjour'
+                //bat echo 'bonjour'
 
                 // To run Maven on a Windows agent, use
                 dir('go-securi') {
