@@ -14,8 +14,8 @@ pipeline {
                  Run Maven on a Unix agent.
                  sh "mvn clean"
                 
-                //git 'https://github.com/eosnica/MSPR.git'
-                //bat echo 'bonjour'
+                git 'https://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@github.com/eosnica/MSPR.git'
+                bat echo 'bonjour'
 
                 // To run Maven on a Windows agent, use
                 dir('go-securi') {
@@ -81,4 +81,4 @@ pipeline {
             }
         }
     }
-}
+
