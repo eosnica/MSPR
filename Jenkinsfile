@@ -6,21 +6,24 @@ pipeline {
         maven "M3"
     }
 
-    stages {
-        stage('Clean') {
-     		steps
-		{
-				git 'https://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@github.com/eosnica/MSPR.git'
-                		// Run Maven on a Unix agent.
-                		sh "mvn clean"
+        stage('Test') 
+        {
+            steps 
+            {
+                // Get some code from a GitHub repository
+                git 'https://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@github.com/eosnica/MSPR.git'
 
-                		// To run Maven on a Windows agent, use
-                		dir('go-securi') 
-                		{
-                   	 	bat "mvn -Dmaven.test.failure.ignore=true package"
-                		}
-		}
-    	}
+                // Run Maven on a Unix agent.
+                sh "mvn clean"
+
+                // To run Maven on a Windows agent, use
+                dir('go-securi') 
+                {
+                    bat "mvn -Dmaven.test.failure.ignore=true test"
+                }
+                
+            }
+        }
         
         stage('Package') 
         {
