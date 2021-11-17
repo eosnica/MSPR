@@ -27,7 +27,7 @@ pipeline {
                 git 'https://github.com/eosnica/MSPR.git'
                 // Run Maven on a Unix agent.
                 sh "mvn clean"
-                 To run Maven on a Windows agent, use
+                 //To run Maven on a Windows agent, use
                 dir('go-securi') 
                 {
                     bat "mvn -Dmaven.test.failure.ignore=true package"
