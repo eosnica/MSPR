@@ -8,7 +8,8 @@ pipeline {
 
     stages {
         stage('Clean') {
-     
+     		steps
+		{
 				git 'https://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@github.com/eosnica/MSPR.git'
                 		// Run Maven on a Unix agent.
                 		sh "mvn clean"
@@ -18,7 +19,7 @@ pipeline {
                 		{
                    	 	bat "mvn -Dmaven.test.failure.ignore=true package"
                 		}
-			}
+		}
     	}
         
         stage('Package') 
