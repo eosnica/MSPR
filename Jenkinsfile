@@ -11,18 +11,19 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 git 'https://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@github.com/eosnica/MSPR.git'
-                // Run Maven on a Unix agent.
-                sh "mvn clean"
+                 Run Maven on a Unix agent.
+                 sh "mvn clean"
                 
-               
+                //git 'https://github.com/eosnica/MSPR.git'
+                bat echo 'bonjour'
 
                 // To run Maven on a Windows agent, use
                 dir('go-securi') {
                     bat "mvn -Dmaven.test.failure.ignore=true clean"
-                }
-                
-            }
-        }
+			}
+		}
+	}
+}
         
         stage('Package') 
         {
