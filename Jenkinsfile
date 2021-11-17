@@ -14,7 +14,9 @@ pipeline {
                 
                
                 // To run Maven on a Windows agent, use
-                
+                dir('go-securi') {
+                    bat "mvn -Dmaven.test.failure.ignore=true clean"        
+                }
                 
             }
         }
