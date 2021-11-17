@@ -1,25 +1,21 @@
 pipeline {
     agent any
-
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "M3"
     }
-
-        stage('Test') 
-        {
-            steps 
-            {
+    stages {
+        stage('Clean') {
+            steps {
                 // Get some code from a GitHub repository
-                git 'https://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@github.com/eosnica/MSPR.git'
-
+                git 'https://github.com/eosnica/MSPR.git'
                 // Run Maven on a Unix agent.
                 sh "mvn clean"
-
+                
+               
                 // To run Maven on a Windows agent, use
-                dir('go-securi') 
-                {
-                    bat "mvn -Dmaven.test.failure.ignore=true test"
+                dir('go-securi') {
+                    bat "mvn -Dmaven.test.failure.ignore=true clean"
                 }
                 
             }
@@ -30,10 +26,9 @@ pipeline {
             steps 
             {
                 // Get some code from a GitHub repository
-                git 'https://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@github.com/eosnica/MSPR.git'
+                git 'https://github.com/eosnica/MSPR.git'
                 // Run Maven on a Unix agent.
                 sh "mvn clean"
-
                 // To run Maven on a Windows agent, use
                 dir('go-securi') 
                 {
@@ -48,11 +43,11 @@ pipeline {
             steps 
             {
                 // Get some code from a GitHub repository
+                git 'https://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@github.com/eosnica/MSPR.git'
                 git 'https://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@github.com/eosnica/MSPR.git'
 
                 // Run Maven on a Unix agent.
                 sh "mvn clean"
-
                 // To run Maven on a Windows agent, use
                 dir('go-securi') 
                 {
@@ -67,11 +62,11 @@ pipeline {
             steps 
             {
                 // Get some code from a GitHub repository
+                git 'https://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@github.com/eosnica/MSPR.git'
                 git 'https://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@github.com/eosnica/MSPR.git'
 
                 // Run Maven on a Unix agent.
                 sh "mvn clean"
-
                 // To run Maven on a Windows agent, use
                 dir('go-securi') 
                 {
@@ -81,4 +76,4 @@ pipeline {
             }
         }
     }
-
+}
