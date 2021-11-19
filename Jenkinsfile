@@ -5,10 +5,13 @@ pipeline {
         maven 'apache-maven-3.6.3'
     }
     stages {
-        stage('Clean') {
+        stage('Example') {
             steps {
                 // Get some code from a GitHub repository
                 git 'https://github.com/eosnica/MSPR.git'
+                sh  'mvn --version'
+                
+                
                 // Run Maven on a Unix agent.
                 sh "mvn clean"
                 
