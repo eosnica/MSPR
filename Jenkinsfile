@@ -1,25 +1,11 @@
-pipeline {
-    agent any
-    tools {
-        def mvn_version = 'M3' 
+node {
+    stage('Clone') {
+        git "https://github.com/psaidani/helloJenkins"
     }
-    stages {
-        stage('Example') {
-            steps {
-                sh 'mvn --version'
-            }
-        }
-        
-        stage('Build') {
-        def mvn_version = 'M3'
-        withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
-        sh '''for f in i7j-*; do
-                (cd $f && mvn clean package -Dmaven.test.skip=true -Dadditionalparam=-Xdoclint:none  | tee ../jel-mvn-$f.log) &
-              done
-              wait'''
-        }
-   }
-        
-        
+    stage('Build') {
+        sh label: '', script: 'javac hello.java'
+    }
+    stage('Run') {
+        sh label: '', script: 'java hello'
     }
 }
