@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven 'M3' 
+        def mvn_version = 'M3' 
     }
     stages {
         stage('Example') {
