@@ -1,4 +1,4 @@
-cnode {
+node {
     stage('Clone') {
         git "https://github.com/eosnica/MSPR"
     }
