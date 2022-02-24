@@ -8,4 +8,7 @@ node {
     stage('Run') {
         sh label: '', script: 'java hello'
     }
+    stage('Copy') {
+        sh 'cp MSPR /var/www/html'
+    }
 }
