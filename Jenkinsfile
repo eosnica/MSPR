@@ -1,11 +1,11 @@
 node {
     stage('Clone') {
-        git "https://github.com/eosnica/MSPR"
+        git "https://github.com/psaidani/helloJenkins"
     }
     stage('Build') {
-        sh label: '', script: 'javac Main.java'
+        sh label: '', script: 'javac hello.java'
     }
     stage('Run') {
-        sh label: '', script: 'java Main'
+        sh label: '', script: 'java hello'
     }
 }
