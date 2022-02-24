@@ -3,7 +3,7 @@ node {
         git "https://github.com/eosnica/MSPR/"
     }
     stage('Build') {
-        sh 'ls -a'
+        sh 'ls -al && pwd'
         sh label: '', script: 'javac hello.java'
     }
     stage('Run') {
