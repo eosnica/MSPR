@@ -9,6 +9,7 @@ node {
     stage('Run') {
         sh label: '', script: 'java hello'
     }
-    
-    //sh 'cp chemin /
+    stage('Deploy') {
+        sh 'cp MSPR/tree/main/go-securi/src/main/java/com/epsi /var/www/html'
+    }
 }
