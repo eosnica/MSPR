@@ -1,6 +1,6 @@
 node {
     stage('Clone') {
-        git "https://github.com/eosnica/MSPR"
+        git "https://github.com/eosnica/MSPR/"
     }
     stage('Build') {
         sh 'ls -a'
