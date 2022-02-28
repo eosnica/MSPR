@@ -1,11 +1,11 @@
 node {
     stage('Clone') {
-        git "https://github.com/psaidani/helloJenkins/go-securi/src/main/java/com/epsi/Fichiers.java"
+        git "https://github.com/psaidani/helloJenkins/"
     }
     stage('Build') {
-        sh label: '', script: 'javac Fichier.java'
+        sh label: '', script: 'javac hello.java'
     }
     stage('Run') {
-        sh label: '', script: 'java Fichier'
+        sh label: '', script: 'java hello'
     }  
 }
